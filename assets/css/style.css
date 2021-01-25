@@ -25,8 +25,8 @@ header a {
 	color: #fce138;
 	text-decoration: none;
 }
-	/* Nav */
 
+	/* Nav */
 		header nav {
 			float: right;
 			margin: 7px;
@@ -43,7 +43,6 @@ header a {
 		}
 
 /* BODY */
-
 body {
 	color: #39a6b2;
 	font-family: Helvetica, Arial, sans-serif;
@@ -54,69 +53,89 @@ section {
 }
 
 	/* Hero Section */
+		.hero {
+			background-image: url("../images/hero-bg.jpg");
+			background-position: center;
+			background-size: cover;
+			height: 600px;
+			position: relative;
+		}
 
-	.hero {
-		background-image: url("../images/hero-bg.jpg");
-		background-position: center;
-		background-size: cover;
-		height: 600px;
-		position: relative;
-	}
+		/* Hero Headings */
+			.hero h3 {
+				font-size: 24px;
+				margin: 0;
+			}
 
-	/* Hero Headings */
+		/* Hero Form */
+			.hero-form {
+				background-color: #fce138;
+				border-color: #024e76;
+				border-style: solid;
+				border-width: 3px;
+				bottom: 120px;
+				color: #024e76;
+				padding: 20px;
+				position: absolute;
+				right: 140px;
+				width: 500px;
+			}
 
-	.hero h3 {
-		font-size: 24px;
-		margin: 0;
-	}
+			.hero-form p {
+				margin: 5px 0 15px 0;
+			}
 
-	/* Hero Form */
+			.hero-form label {
+				margin: 0px;
+			}
 
-	.hero-form {
-		background-color: #fce138;
-		border-color: #024e76;
-		border-style: solid;
-		border-width: 3px;
-		bottom: 120px;
-		color: #024e76;
-		padding: 20px;
-		position: absolute;
-		right: 140px;
-		width: 500px;
-	}
+			.hero-form-block {
+				display: block;
+			}
 
-	.hero-form p {
-		margin: 5px 0 15px 0;
-	}
+			.form-input {
+				border: 1px solid #024e76;
+				color: #024e76;
+				display: block;
+				font-size: 16px;
+				margin-bottom: 15px;
+				padding: 7px 15px;
+				width: 100%;
+			}
 
-	.hero-form label {
-		margin: 0px;
-	}
+			.hero-form button {
+				background-color: #024e76;
+				border: none;
+				color: #fce138;
+				font-size: 16px;
+				padding: 10px 20px;
+			}
 
-	.hero-form-block {
-		display: block;
-	}
+	/* Intro */
+		.intro {
+			text-align: center;
+		}
 
-	.form-input {
-		border: 1px solid #024e76;
-		color: #024e76;
-		display: block;
-		font-size: 16px;
-		margin-bottom: 15px;
-		padding: 7px 15px;
-		width: 100%;
-	}
+		/* Intro Headings & Paragraph */
+			.intro h2 {
+				border-bottom: 3px solid;
+				border-color: #fce138;
+				color: #024e76;
+				display: inline-block;
+				font-size: 55px;
+				margin-bottom: 35px;
+				padding: 0 100px 20px 100px;
+			}
 
-	.hero-form button {
-		background-color: #024e76;
-		border: none;
-		color: #fce138;
-		font-size: 16px;
-		padding: 10px 20px;
-	}
+			.intro p {
+				color: #39a6b2;
+				font-size: 20px;
+				line-height: 1.7;
+				margin: 0 auto;
+				width: 80%;
+			}
 
 /* Footer */
-
 footer {
 	background-color: #fce138;
 	padding: 40px 35px;
