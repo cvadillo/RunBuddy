@@ -1,10 +1,52 @@
 /* Run Buddy CSS Sheet */
 
-/* HEADER */
+/* Remove Brower CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
 
-/* NAV */
+/* HEADER */
+header {
+	background-color: #39a6b2;
+	padding: 20px 35px;
+}
+
+header h1 {
+	color: #fce138;
+	display: inline;
+	font-weight: bold;
+	font-size: 36px;
+	margin: 0;
+}
+
+header a {
+	color: #fce138;
+	text-decoration: none;
+}
+	/* Nav */
+
+		header nav {
+			float: right;
+			margin: 7px;
+		}
+
+		header nav ul li {
+			display: inline;
+		}
+
+		header nav ul li a {
+			font-weight: lighter;
+			font-size: 22px;
+			margin: 0 30px;
+		}
 
 /* BODY */
+
+body {
+	color: #39a6b2;
+	font-family: Helvetica, Arial, sans-serif;
+}
 
 	/* What We Do */
 
