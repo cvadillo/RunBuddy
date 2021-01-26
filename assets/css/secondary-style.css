@@ -1,0 +1,37 @@
+.hero {
+  background-position: bottom;
+  height: auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.secondary-content {
+	margin: 0 auto;
+	width: 80%;
+}
+
+.secondary-content article {
+	color: #024e76;
+}
+
+.secondary-content h3 {
+	font-size: 25px;
+	margin: 20px;
+}
+
+.secondary-content p {
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 20px;
+}
+
+.secondary-content ul li {
+	margin-top: 15px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.secondary-content li {
+	color: #39a6b2;
+	margin: 10px 0 10px 0;
+}
