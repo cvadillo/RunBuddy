@@ -1,5 +1,15 @@
-# Run Buddy Inc.
 
-hello world
+## Purpose
+A website that offers fitness training services. 
 
-This is a comment so that I can test how to merge other branches into a development branch.
+## Built With
+* HTML
+* CSS
+
+## Website
+https://lernantino.github.io/run-buddy/
+
+## Contribution
+Made with ❤️ by Carlos Vadillo [AKA Cavarod]
+
+### ©️2019 Run Buddy, Inc 
