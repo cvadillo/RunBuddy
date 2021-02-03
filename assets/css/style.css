@@ -44,7 +44,7 @@ header a {
 		header nav ul li a {
 			font-weight: lighter;
 			font-size: 1.55vw;
-			margin: 10px 15px;
+			padding: 10px 15px;
 		}
 
 /* BODY */
@@ -389,7 +389,7 @@ footer div {
 
 	header nav ul {
 		margin-top: 20px;
-		width: 100px;
+		width: 100%;
 		justify-content: center;
 	}
 
