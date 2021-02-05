@@ -21,8 +21,8 @@ header {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 20px 35px;
-	position: -webkit-sticky;
 	position: sticky;
+	position: -webkit-sticky;
 	top: 0;
 	z-index: 9999;
 	/*CSS to make the HEADER look like the HERO*/
@@ -112,8 +112,9 @@ section {
 		/* Home Page Hero */
 			.hero {
 				align-items: flex-start;
+				background-attachment: fixed;
 				background-image: url("../images/hero-bg.jpg");
-				background-position: center;
+				background-position: 80%;
 				background-size: cover;
 				display: flex;
 				flex-wrap: wrap;
@@ -206,63 +207,65 @@ section {
 			}
 
 		/*Special Content for the Radio and Checkboxes*/
-			.checkbox-wrapper input, .radio-wrapper input {
-				opacity: 0;
-			}
+            .checkbox-wrapper input, .radio-wrapper input {
+                opacity: 0;
+            }
 
-			.checkbox-wrapper label, .radio-wrapper label {
-				left: 10px;
-				line-height: 1.6;
-				margin: 10px;
-				position: relative;
-			}
+            .checkbox-wrapper label, .radio-wrapper label {
+                position: relative;
+                left: 10px;
+                margin: 10px;
+                line-height: 1.6;
+            }
 
-			.checkbox-wrapper label::before, .radio-wrapper label::before {
-				background: rgba(255, 255, 255, .75);
-				border: 1px solid var(--secondary-color);
-				content: "";
-				height: 20px;
-				left: -30px;
-				position: absolute;
-				top: -4px;
-				width: 20px;
-			}
+            .checkbox-wrapper label::before, .radio-wrapper label::before {
+                content: "";
+                height: 20px;
+                width: 20px;
+                background: rgba(255, 255, 255, 0.75);  
+                border: 1px solid var(--secondary-color);  
+                position: absolute;
+                top: -4px;
+                left: -30px;
+            }
 
-			.checkbox-wrapper input + label ::after, .radio-wrapper input + label::after {
-				content: none;
-			}
+            .radio-wrapper label::before {
+                border-radius: 50%;
+            }
 
-			.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after {
-  				content: "";
-			}
+            .radio-wrapper label::after {
+                content: "";
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background: var(--secondary-color);
+                position: absolute;
+                left: -29px;
+                top: -3px;
+                background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+            }
 
-			.checkbox-wrapper label::after {
-				border-left: 2px solid var(--secondary-color);
-				border-bottom: 2px solid var(--secondary-color);
-				content: "";
-				height: 6px;
-				left: -26px;
-				position: absolute;
-				top: 1px;
-				transform: rotate(-58deg);
-				width: 14px;
-			}
+            .checkbox-wrapper label::after {
+                content: "";
+                height: 6px;
+                width: 14px;
+                border-left: 2px solid var(--secondary-color);
+                border-bottom: 2px solid var(--secondary-color);
+                position: absolute;
+                left: -26px;
+                top: 1px;
+                transform: rotate(-58deg);
+            }
 
-			.radio-wrapper label::before {
-				border-radius: 50%;
-			}
+            .checkbox-wrapper input + label::after, 
+            .radio-wrapper input + label::after {
+                content: none;
+            }
 
-			.radio-wrapper label::after {
-				background: var(--secondary-color);
-				background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
-				border-radius: 50%;
-				content: "";
-				height: 20px;
-				left: -29px;
-				position: absolute;
-				top: -3px;
-				width: 20px;
-			}
+            .checkbox-wrapper input:checked + label::after, 
+            .radio-wrapper input:checked + label::after {
+                content: "";
+            }
 
 	/* Intro */
 		.intro p {
