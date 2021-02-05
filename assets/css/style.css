@@ -27,10 +27,9 @@ header {
 	z-index: 9999;
 	/*CSS to make the HEADER look like the HERO*/
 	background-attachment: fixed;
-	background-position: 70%;
+	background-position: 80%;
 	background-image: url("../images/hero-bg.jpg");
 	background-size: cover;
-	background-position: center;
 }
 
 header h1 {
