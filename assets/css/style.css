@@ -7,9 +7,16 @@
 	padding: 0;
 }
 
+/* ROOT Variables*/
+:root {
+	--primary-color: #fce138;
+	--secondary-color: #024e76;
+	--tertiary-color: #39a6b2;
+}
+
 /* HEADER */
 header {
-	background-color: #39a6b2;
+	background-color: var(--tertiary-color);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -17,16 +24,17 @@ header {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
+	z-index: 9999;
 	/*CSS to make the HEADER look like the HERO*/
 	background-attachment: fixed;
-	background-position: 80%;
+	background-position: 70%;
 	background-image: url("../images/hero-bg.jpg");
 	background-size: cover;
 	background-position: center;
 }
 
 header h1 {
-	color: #fce138;
+	color: var(--primary-color);
 	font-weight: bold;
 	font-size: 36px;
 	margin: 0;
@@ -34,7 +42,7 @@ header h1 {
 }
 
 header a {
-	color: #fce138;
+	color: var(--primary-color);
 	text-decoration: none;
 }
 
@@ -59,15 +67,15 @@ header a {
 		}
 
 		header nav ul li a:hover {
-			background: #fce138;
+			background: var(--primary-color);
 			border-radius: 15px;
-			color: #024e76;
+			color: var(--secondary-color);
 			text-shadow: none;
 		}		
 
 /* BODY */
 body {
-	color: #39a6b2;
+	color: var(--tertiary-color);
 	font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -76,7 +84,7 @@ section {
 }
 
 .section-title {
-	color: #024e76;
+	color: var(--secondary-color);
 	border-bottom: 3px solid;
 	font-size: 48px;
 	margin: 0 auto 35px auto;
@@ -86,11 +94,11 @@ section {
 }
 
 .primary-border {
-	border-color: #fce138;
+	border-color: var(--primary-color);
 }
 
 .secondary-border {
-	border-color: #39a6b2;
+	border-color: var(--tertiary-color);
 }
 
 .text-left {
@@ -128,7 +136,7 @@ section {
 			}
 
 			.hero-cta h2 {
-				color: #fce138;
+				color: var(--primary-color);
 				font-size: 55px;
 				font-style: italic;
 				text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -145,12 +153,12 @@ section {
 		/* Hero Form */
 			.hero-form {
 				background-color: rgb(252, 225, 56, .8);
-				border-color: #024e76;
+				border-color: var(--secondary-color);
 				border-radius: 15px;
 				border-style: solid;
 				border-width: 3px;
 				box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-				color: #024e76;
+				color: var(--secondary-color);
 				margin: 3.5%;
 				padding: 20px;
 				width: 40%;
@@ -170,9 +178,9 @@ section {
 
 			.form-input {
 				background-color: rgba(255, 255, 255, .75);
-				border: 1px solid #024e76;
+				border: 1px solid var(--secondary-color);
 				border-radius: 10px;
-				color: #024e76;
+				color: var(--secondary-color);
 				display: block;
 				font-size: 16px;
 				margin-bottom: 15px;
@@ -186,21 +194,80 @@ section {
 			}
 
 			.hero-form button {
-				background-color: #024e76;
+				background-color: var(--secondary-color);
 				border: none;
 				border-radius: 10px;
-				color: #fce138;
+				color: var(--primary-color);
 				font-size: 16px;
 				padding: 10px 20px;
 			}
 
 			.hero-form button:hover {
-				background-color: #39a6b2;
+				background-color: var(--tertiary-color);
+			}
+
+		/*Special Content for the Radio and Checkboxes*/
+			.checkbox-wrapper input, .radio-wrapper input {
+				opacity: 0;
+			}
+
+			.checkbox-wrapper label, .radio-wrapper label {
+				left: 10px;
+				line-height: 1.6;
+				margin: 10px;
+				position: relative;
+			}
+
+			.checkbox-wrapper label::before, .radio-wrapper label::before {
+				background: rgba(255, 255, 255, .75);
+				border: 1px solid var(--secondary-color);
+				content: "";
+				height: 20px;
+				left: -30px;
+				position: absolute;
+				top: -4px;
+				width: 20px;
+			}
+
+			.checkbox-wrapper input + label ::after, .radio-wrapper input + label::after {
+				content: none;
+			}
+
+			.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after {
+  				content: "";
+			}
+
+			.checkbox-wrapper label::after {
+				border-left: 2px solid var(--secondary-color);
+				border-bottom: 2px solid var(--secondary-color);
+				content: "";
+				height: 6px;
+				left: -26px;
+				position: absolute;
+				top: 1px;
+				transform: rotate(-58deg);
+				width: 14px;
+			}
+
+			.radio-wrapper label::before {
+				border-radius: 50%;
+			}
+
+			.radio-wrapper label::after {
+				background: var(--secondary-color);
+				background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+				border-radius: 50%;
+				content: "";
+				height: 20px;
+				left: -29px;
+				position: absolute;
+				top: -3px;
+				width: 20px;
 			}
 
 	/* Intro */
 		.intro p {
-			color: #39a6b2;
+			color: var(--tertiary-color);
 			font-size: 20px;
 			line-height: 1.7;
 			margin: 0 auto;
@@ -210,8 +277,8 @@ section {
 
 	/* Page Title */
 		.page-title {
-			border-bottom: 4px solid #fce138;
-			color: #fce138;
+			border-bottom: 4px solid var(--primary-color);
+			color: var(--primary-color);
 			display: inline-block;
 			font-size: 42px;
 			font-style: italic;
@@ -221,12 +288,12 @@ section {
 
 	/* Steps and Steps Section */
 		.steps {
-			background: #fce138;
+			background: var(--primary-color);
 		}
 
 		.step {
 			align-items: center;
-			border-bottom: 1px solid #39a6b2;
+			border-bottom: 1px solid var(--tertiary-color);
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
@@ -240,7 +307,7 @@ section {
 		}
 
 		.step h3 {
-			color: #024e76;
+			color: var(--secondary-color);
 			flex: 1 30%;
 			font-size: 46px;
 		}
@@ -266,13 +333,13 @@ section {
 		}
 
 		.step-text h4 {
-			color: #024e76;
+			color: var(--secondary-color);
 			font-size: 26px;
 			line-height: 1.5;
 		}
 
 		.step-text p {
-			color: #39a6b2;
+			color: var(--tertiary-color);
 			font-size: 18px;
 		}
 
@@ -286,8 +353,8 @@ section {
 		}
 
 		.trainer {
-			background: #024e76;
-			color: #fce138;
+			background: var(--secondary-color);
+			color: var(--primary-color);
 			flex: 1;
 			margin: 20px;
 		}
@@ -317,11 +384,11 @@ section {
 
 	/* Reach Out */
 	.contact {
-		background-color: #024e76;
+		background-color: var(--secondary-color);
 	}
 
 	.contact h2 {
-		color: #fce138;
+		color: var(--primary-color);
 	}
 
 	.contact-info {
@@ -345,7 +412,7 @@ section {
 	}
 
 	.contact-info h3 {
-		color: #fce138;
+		color: var(--primary-color);
 		font-size: 32px;
 	}
 
@@ -357,14 +424,14 @@ section {
 	}
 
 	.contact-info a {
-		color: #fce138;
+		color: var(--primary-color);
 	}
 
 	.contact-form input, .contact-form textarea {
 		background-color: rgba(255, 255, 255, .75);
-		border: 1px solid #024e76;
+		border: 1px solid var(--secondary-color);
 		border-radius: 10px;
-		color: #024e76;
+		color: var(--secondary-color);
 		display: block;
 		font-size: 16px;
 		margin-bottom: 15px;
@@ -379,10 +446,10 @@ section {
 	}
 
 	.contact-form button {
-		background: #fce138;
+		background: var(--primary-color);
 		border: none;
 		border-radius: 10px;
-		color: #024e76;
+		color: var(--secondary-color);
 		font-size: 16px;
 		padding: 15px 0;
 		text-align: center;
@@ -390,13 +457,13 @@ section {
 	}
 
 	.contact-form button:hover {
-		background: #39a6b2;
-		color: #fce138;
+		background: var(--tertiary-color);
+		color: var(--primary-color);
 	}
 
 /* Footer */
 footer {
-	background-color: #fce138;
+	background-color: var(--primary-color);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -405,11 +472,11 @@ footer {
 }
 
 footer a {
-	color: #024e76;
+	color: var(--secondary-color);
 }
 
 footer h2 {
-	color: #024e76;
+	color: var(--secondary-color);
 	font-size: 30px;
 	margin: 0;
 }
